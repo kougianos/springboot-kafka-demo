@@ -34,6 +34,6 @@ Steps to run it from a command line (assuming zookeeper and kafka are up and run
 `java -jar target/receiver-0.0.1-SNAPSHOT.jar` -> You should see application starting on port 8081\
 `cd ../transformer`\
 `mvn install` -> BUILD SUCCESS\
-`java -jar target/receiver-0.0.1-SNAPSHOT.jar` -> You should see application starting on port 8082\
+`java -jar target/transformer-0.0.1-SNAPSHOT.jar` -> You should see application starting on port 8082\
 \
 POST the above JSON on localhost:8081/postPerson using Postman or whatever you like and voila!
