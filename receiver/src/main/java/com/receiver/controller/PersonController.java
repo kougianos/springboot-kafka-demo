@@ -23,7 +23,7 @@ public class PersonController {
     /**
      * Handle asset post controller.
      */
-    @PostMapping("/postPrepaidAsset")
+    @PostMapping("/postPerson")
     @ResponseStatus(value = HttpStatus.OK)
     public void handleAsset(@Valid @RequestBody Person person) {
         logger.info("Received person: {}", person);
