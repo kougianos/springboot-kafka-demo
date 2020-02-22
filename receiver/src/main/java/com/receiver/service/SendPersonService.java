@@ -14,9 +14,6 @@ public class SendPersonService {
 
     private static final Logger logger = LoggerFactory.getLogger(SendPersonService.class);
 
-    @Value("${mongodb.collectionName}")
-    private String collectionName;
-
     private MessageProducer messageProducer;
     private ObjectMapper objectMapper;
 

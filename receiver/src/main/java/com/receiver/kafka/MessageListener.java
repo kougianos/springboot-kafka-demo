@@ -11,16 +11,11 @@ import org.springframework.stereotype.Component;
 @Component
 public class MessageListener {
 
-    private SendPersonService sendPersonService;
     private static final Logger logger = LoggerFactory.getLogger(MessageListener.class);
 
-    public MessageListener(SendPersonService sendPersonService) {
-        this.sendPersonService = sendPersonService;
-    }
-
-    @KafkaListener(topics = "${kafka.topic.transmitter}", containerFactory = "personKafkaListenerContainerFactory")
+    @KafkaListener(topics = "${kafka.topic.transformer}", containerFactory = "personKafkaListenerContainerFactory")
     public void listenAsset(@Payload Person person) {
-        logger.info("received person message='{}'", person);
+        logger.info("received transformed person message='{}'", person);
     }
 
 }
