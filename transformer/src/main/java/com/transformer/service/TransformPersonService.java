@@ -1,10 +1,11 @@
 package com.transformer.service;
 
 import com.transformer.dto.Person;
-import com.transformer.kafka.MessageListener;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Service;
 
+@Service
 public class TransformPersonService {
 
     private static final Logger logger = LoggerFactory.getLogger(TransformPersonService.class);

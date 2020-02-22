@@ -1,6 +1,6 @@
 package com.transformer.config;
 
-import com.receiver.dto.Person;
+import com.transformer.dto.Person;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.beans.factory.annotation.Value;
@@ -50,7 +50,7 @@ public class KafkaProducerConfig {
     }
     
     @Bean
-    public KafkaTemplate<String, Person> assetKafkaTemplate() {
+    public KafkaTemplate<String, Person> personKafkaTemplate() {
         return new KafkaTemplate<>(personProducerFactory());
     }
     

@@ -14,7 +14,7 @@ public class MessageListener {
     private static final Logger logger = LoggerFactory.getLogger(MessageListener.class);
 
     @KafkaListener(topics = "${kafka.topic.transformer}", containerFactory = "personKafkaListenerContainerFactory")
-    public void listenAsset(@Payload Person person) {
+    public void listenPerson(@Payload Person person) {
         logger.info("received transformed person message='{}'", person);
     }
 

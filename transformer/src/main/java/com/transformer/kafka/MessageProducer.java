@@ -40,7 +40,7 @@ public class MessageProducer {
     }
 
     /**
-     * Send message to kafka as Asset object.
+     * Send message to kafka as Person object.
      */
     public boolean sendPersonMessage(Person person) {
         try {

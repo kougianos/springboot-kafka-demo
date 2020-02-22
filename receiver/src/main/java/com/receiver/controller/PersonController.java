@@ -21,11 +21,11 @@ public class PersonController {
     }
 
     /**
-     * Handle asset post controller.
+     * Person controller.
      */
     @PostMapping("/postPerson")
     @ResponseStatus(value = HttpStatus.OK)
-    public void handleAsset(@Valid @RequestBody Person person) {
+    public void postPerson(@Valid @RequestBody Person person) {
         logger.info("Received person: {}", person);
         sendPersonService.sendPersonToKafka(person);
     }

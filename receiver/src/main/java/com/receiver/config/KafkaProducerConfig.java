@@ -50,7 +50,7 @@ public class KafkaProducerConfig {
     }
     
     @Bean
-    public KafkaTemplate<String, Person> assetKafkaTemplate() {
+    public KafkaTemplate<String, Person> personKafkaTemplate() {
         return new KafkaTemplate<>(personProducerFactory());
     }
     

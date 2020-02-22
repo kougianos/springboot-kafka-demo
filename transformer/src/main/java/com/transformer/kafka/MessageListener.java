@@ -18,7 +18,6 @@ public class MessageListener {
     private MessageProducer messageProducer;
     private ObjectMapper objectMapper;
 
-
     public MessageListener(TransformPersonService transformPersonService, MessageProducer messageProducer, ObjectMapper objectMapper) {
         this.transformPersonService = transformPersonService;
         this.messageProducer = messageProducer;
